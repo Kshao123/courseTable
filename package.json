@@ -1,0 +1,27 @@
+{
+  "name": "timetable-move",
+  "version": "1.0.1",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "Kshao",
+  "keywords": [
+    "timetable",
+    "timetable-move"
+  ],
+  "scripts": {
+    "build": "webpack --progress",
+    "watch": "webpack --watch --progress"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^1.0.1",
+    "css-loader": "^2.1.0",
+    "react": "^16.8.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
+}
