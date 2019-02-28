@@ -1,3 +1,3 @@
-import Hello from './components/Hello.js';
+import TimeTableMove from './TimeTableMove';
 
-export default Hello
+export default TimeTableMove
