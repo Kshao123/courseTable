@@ -4,4 +4,6 @@ export interface TableProps {
     timetables?: any[];
 }
 
-export default class CourseTable extends React.PureComponent<TableProps, any> {}
+declare class CourseTable extends React.PureComponent<TableProps, any> {}
+
+export default CourseTable

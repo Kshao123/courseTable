@@ -1,12 +1,7 @@
-// import CourseTable from './CourseTable';
-//
-// export default CourseTable
-
 import React, { PureComponent } from 'react';
-// import DatePicker from 'antd/lib/date-picker'
-// import 'antd/lib/date-picker/style/index.css'
-// import 'antd/dist/antd.css'
-// import { DatePicker } from 'antd'
+import { DatePicker } from 'antd'
+import styles from './style/timeTables.less'
+// import styles from './style/index.css'
 
 class CourseTable extends PureComponent {
     componentDidMount() {
@@ -15,9 +10,9 @@ class CourseTable extends PureComponent {
 
     render() {
         return(
-            <div>
+            <div className={styles.coursesTable}>
                 new TimeTables
-                {/*<DatePicker />*/}
+                <DatePicker />
             </div>
         )
     }
