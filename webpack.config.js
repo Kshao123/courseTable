@@ -19,7 +19,9 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader?presets[]=env&presets[]=react'
+                use: {
+                    loader: "babel-loader"
+                }
             },
             {
                 test: /\.less$/,

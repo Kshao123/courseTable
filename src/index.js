@@ -341,17 +341,24 @@ class CourseTables extends PureComponent{
       const left = `${this.weekPos[movedPos.left].left}px`;
       currentEl.style.top = top;
       currentEl.style.left = left;
-      handleConfirm(
-          {
-            startTime: getTime,
-          },
-          () => {
-            resetFields();
-            this.setState({
-              visible: false
-            });
-          }
-      )
+      if (handleConfirm) {
+        handleConfirm(
+            {
+              startTime: getTime,
+            },
+            () => {
+              resetFields();
+              this.setState({
+                visible: false
+              });
+            }
+        )
+      } else {
+        this.setState({
+          visible: false
+        });
+        resetFields()
+      }
     });
   };
 
@@ -413,7 +420,7 @@ class CourseTables extends PureComponent{
                   renderWeek().map((item, index) => (
                       <div key={item.date} style={{ width: contentItemWidth, left: contentItemWidth * index + timeLineWidth}}>
                         {
-                          <div className={new Date().getDay() === new Date(item.date).getDay() ? styles.heightLightWeek : ''} style={{ textAlign: 'center', width: '100%'}}>
+                          <div className={new Date().getDate() === new Date(item.date).getDate() ? styles.heightLightWeek : ''} style={{ textAlign: 'center', width: '100%'}}>
                             <span>{`周${parseTime(item.date, '{a}')}`}</span>
                             <span>{`${parseTime(item.date, '{m}-{d}')}`}</span>
                           </div>
@@ -476,7 +483,7 @@ class CourseTables extends PureComponent{
               onOk={handleOk}
               onCancel={handleCancel}
           >
-            <Spin spinning={loading}>
+            <Spin spinning={!!loading}>
               <Form layout="horizontal">
                 <Form.Item label="日期" {...formItemLayout}>
                   {getFieldDecorator('timeDate', {

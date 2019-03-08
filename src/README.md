@@ -8,7 +8,7 @@
 ## ✨ Features
 
 - 可移动的 课程表
-- 代码简单，测试暂无，欢迎优化
+- 代码简单，欢迎优化
 
 
 
@@ -19,25 +19,35 @@
 ## 📦 Install
 
 ```bash
-npm install antd --save
+npm i course-table
+npm i course-table -S
 ```
 
-```bash
-yarn add antd
-```
 
 ## 🔨 Usage
 
 ```jsx
-import { DatePicker } from 'antd';
-ReactDOM.render(<DatePicker />, mountNode);
+import CourseTable from 'course-table';
+
+const courseTables = {
+      1: [
+        {
+          startTime:1551920827000,
+          endTime:1551924427000,
+          stuNameList: ['123'],
+          teaName: '312'
+        }
+      ]
+    };
+
+const handleConfirm = (data,handleOK) => {
+    handleOK()
+};
+
+ReactDOM.render(
+    <CourseTable 
+        courseTables={courseTables}
+        handleConfirm={handleConfirm}
+    />, 
+    mountNode);
 ```
-
-And import style manually:
-
-```jsx
-import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
-```
-
-Or [import components on demand](https://ant.design/docs/react/getting-started#Import-on-Demand).
-
