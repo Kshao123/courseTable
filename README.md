@@ -6,7 +6,7 @@
 
 - 可移动的 课程表
 - 代码简单，欢迎优化
-- 预览链接 Kshao123.github.io
+- 预览链接 https://Kshao123.github.io
 
 
 
