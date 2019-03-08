@@ -2,9 +2,6 @@
 <h1 align="center">Course Table</h1>
 
 
-[![](https://cdn-images-1.medium.com/max/2000/1*NIlj0-TdLMbo_hzSBP8tmg.png)](http://ant.design)
-
-
 ## ✨ Features
 
 - 可移动的 课程表
