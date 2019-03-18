@@ -420,7 +420,7 @@ class CourseTables extends PureComponent{
                   renderWeek().map((item, index) => (
                       <div key={item.date} style={{ width: contentItemWidth, left: contentItemWidth * index + timeLineWidth}}>
                         {
-                          <div className={new Date().getDate() === new Date(item.date).getDate() ? styles.heightLightWeek : ''} style={{ textAlign: 'center', width: '100%'}}>
+                          <div className={(new Date().getDate() === new Date(item.date).getDate() && new Date().getMonth() === new Date(item.date).getMonth()) ? styles.heightLightWeek : ''} style={{ textAlign: 'center', width: '100%'}}>
                             <span>{`周${parseTime(item.date, '{a}')}`}</span>
                             <span>{`${parseTime(item.date, '{m}-{d}')}`}</span>
                           </div>
