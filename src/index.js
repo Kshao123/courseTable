@@ -8,7 +8,6 @@ import {
   Popover,
   DatePicker,
 } from 'antd';
-import classNames from 'classnames'
 import moment from 'moment'
 import styles from './index.less';
 import { parseTime } from './utils';
@@ -211,13 +210,10 @@ class CourseTables extends PureComponent{
     this.top = 0;
     this.left = 0;
     if (e.button === 0) {
-      let el = e.target;
+      let el = e.currentTarget;
       let cEl;
       this.scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
       this.scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
-      if (el.parentNode.className.split(' ').includes(classNames(styles.courseRect))) {
-        el = el.parentNode;
-      }
       this.disX = e.clientX + this.scrollLeft - el.offsetLeft;
       this.disY = e.clientY + this.scrollTop - el.offsetTop;
       cEl = el.cloneNode(true);
